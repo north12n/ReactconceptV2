@@ -1,27 +1,23 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import {
-  Home,
-  Header,
-  Contact,
-  ProductDetail,
-  ProductList,
-} from "./components/";
+import  Header from "./components/Header"
+import MuiHeader from "./components/MuiHeader"
+import MianRouter from "./components/MianRout"
 
 function App() {
   return (
-    <div>
+
+      <div>
         <Header/>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="products" element={<ProductList />} />
-            <Route path="products/999" element={<ProductDetail />} />
-            <Route path="contact" element={<Contact />} />
-          
-          </Routes>
-    </div>
-     
+        {/* <MuiHeader/> */}
+
+        <MianRouter />
+
+        {/* <Router>
+          <MianRouter />
+        </Router> */}
+
+      </div>
+    
   );
 }
-
 export default App;
